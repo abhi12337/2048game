@@ -388,8 +388,10 @@ const Game2048 = () => {
     const getTilePosition = (row, col) => {
         const isMobile = window.innerWidth <= 520;
         if (isMobile) {
-            const cellSize = Math.min(106.25, (window.innerWidth - 80) / 4);
-            const gap = 10;
+            // Match CSS: (100vw - 64px) / 4 for cell size, 8px gap
+            const viewportWidth = window.innerWidth;
+            const cellSize = Math.min(90, (viewportWidth - 64) / 4);
+            const gap = 8;
             return {
                 left: `${col * (cellSize + gap)}px`,
                 top: `${row * (cellSize + gap)}px`,

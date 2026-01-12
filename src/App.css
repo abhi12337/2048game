@@ -245,90 +245,102 @@ h1 {
 
 /* Responsive design */
 @media screen and (max-width: 520px) {
+    .app {
+        padding: 10px;
+    }
+    
     .container {
         max-width: 100%;
-        padding: 0 10px;
+        width: 100%;
     }
     
     h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
     
     .score-box {
-        padding: 8px 15px;
-        min-width: 60px;
+        padding: 8px 12px;
+        min-width: 50px;
     }
     
     .score-label {
-        font-size: 11px;
+        font-size: 10px;
     }
     
     .score {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .above-game {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         align-items: flex-start;
     }
     
     .game-intro {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .new-game-button {
         padding: 8px 16px;
-        font-size: 16px;
+        font-size: 14px;
         align-self: stretch;
     }
     
     .game-container {
         width: 100%;
+        max-width: 100%;
         height: auto;
         aspect-ratio: 1;
-        padding: 10px;
+        padding: 8px;
+        box-sizing: border-box;
     }
     
     .grid-container,
     .tile-container {
-        top: 10px;
-        left: 10px;
+        top: 8px;
+        left: 8px;
     }
     
     .grid-row {
-        gap: 10px;
-        margin-bottom: 10px;
+        gap: 8px;
+        margin-bottom: 8px;
     }
     
     .grid-cell {
-        width: calc((100vw - 80px) / 4);
-        height: calc((100vw - 80px) / 4);
-        max-width: 106.25px;
-        max-height: 106.25px;
+        width: calc((100vw - 64px) / 4);
+        height: calc((100vw - 64px) / 4);
+        max-width: 90px;
+        max-height: 90px;
     }
     
     .tile {
-        width: calc((100vw - 80px) / 4);
-        height: calc((100vw - 80px) / 4);
-        max-width: 106.25px;
-        max-height: 106.25px;
-        font-size: clamp(25px, 8vw, 55px);
+        width: calc((100vw - 64px) / 4);
+        height: calc((100vw - 64px) / 4);
+        max-width: 90px;
+        max-height: 90px;
+        font-size: clamp(16px, 5vw, 45px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        line-height: 1;
     }
     
     .tile-128,
     .tile-256,
     .tile-512 {
-        font-size: clamp(22px, 7vw, 45px);
+        font-size: clamp(14px, 4.5vw, 38px) !important;
     }
     
     .tile-1024,
     .tile-2048 {
-        font-size: clamp(18px, 6vw, 35px);
+        font-size: clamp(11px, 3.8vw, 30px) !important;
     }
     
     .tile-super {
-        font-size: clamp(16px, 5vw, 30px);
+        font-size: clamp(10px, 3.5vw, 25px) !important;
     }
     
     .game-message p {
